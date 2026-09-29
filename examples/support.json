@@ -1,0 +1,28 @@
+{
+  "model": "jasmine-qwen3.5-0.8b",
+  "state": "I was charged twice for my order and need a refund today.",
+  "questions": {
+    "department": {
+      "type": "choice",
+      "instructions": "Which team should handle this request?",
+      "criteria": {
+        "billing": "Payments, duplicate charges, refunds",
+        "technical": "Bugs, outages, integrations",
+        "sales": "Pricing, upgrades, new accounts"
+      }
+    },
+    "urgent": {
+      "type": "noul",
+      "instructions": "Does the customer explicitly need help today?"
+    },
+    "severity": {
+      "type": "score",
+      "instructions": "How severe is the issue for this customer?",
+      "criteria": [
+        "Minor inconvenience, no money affected",
+        "Money affected, but no immediate deadline",
+        "Money affected and action needed today"
+      ]
+    }
+  }
+}
